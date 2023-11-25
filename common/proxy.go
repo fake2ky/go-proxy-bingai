@@ -154,7 +154,7 @@ func NewSingleHostReverseProxy(target *url.URL) *httputil.ReverseProxy {
 		}
 		req.AddCookie(&http.Cookie{
 			Name:	"SRCHHPGUSR",
-			Value:	"SRCHLANG=zh-Hans&BRW=S&BRH=T&CW=1034&CH=1212&SCW=1034&SCH=1212&DPR=2.0&UTC=480&DM=0&PV=6.0&PRVCW=2560&PRVCH=1299&HV=1700906447&WTS=63835967183&BZA=0&IG=976E487D158B44168EB7E30CD5DC904D&CIBV=1.1359.7",
+			Value:	"SRCHLANG=zh-Hans&BRW=NOTP&BRH=S&CW=422&CH=506&SCW=405&SCH=506&PV=0.1.0&PRVCW=1094&PRVCH=506&DPR=1.3&UTC=480&DM=0&IG=1B353B2BF840444FB2C0C32E33876CA9&HV=1700559405&WTS=63836156180&BZA=0&CIBV=1.1359.4",
 			})
 		ua := req.UserAgent()
 		isMobile := strings.Contains(ua, "Mobile") || strings.Contains(ua, "Android")

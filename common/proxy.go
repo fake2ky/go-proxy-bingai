@@ -152,7 +152,10 @@ func NewSingleHostReverseProxy(target *url.URL) *httputil.ReverseProxy {
 				})
 			}
 		}
-
+		req.AddCookie(&http.Cookie{
+			Name:	"SRCHHPGUSR",
+			Value:	"SRCHLANG=zh-Hans&BRW=S&BRH=T&CW=1034&CH=1212&SCW=1034&SCH=1212&DPR=2.0&UTC=480&DM=0&PV=6.0&PRVCW=2560&PRVCH=1299&HV=1700906447&WTS=63835967183&BZA=0&IG=976E487D158B44168EB7E30CD5DC904D&CIBV=1.1359.7",
+			})
 		ua := req.UserAgent()
 		isMobile := strings.Contains(ua, "Mobile") || strings.Contains(ua, "Android")
 
